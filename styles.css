@@ -1,0 +1,360 @@
+/* ===== COLOR PALETTE ===== */
+:root {
+    --black: #0f0f0f;
+    --dark-gray: #1a1a1a;
+    --gold: #d4af37;
+    --dark-gold: #b38f2a;
+    --light-gold: #f5d782;
+    --white: #e8e8e8;
+}
+
+/* ===== BASE RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* ===== NAVBAR STYLES ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--black);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Styling (YMFC in Gold) */
+.nav-logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-logo span {
+    color: var(--gold);
+}
+
+.nav-logo:hover {
+    opacity: 0.9;
+}
+
+/* Mobile Menu (Hidden by Default) */
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    width: 100%;
+    background-color: var(--dark-gray);
+    flex-direction: column;
+    text-align: center;
+    transition: 0.4s;
+    padding: 2rem 0;
+    z-index: 999;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-item {
+    margin: 1.5rem 0;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 60%;
+}
+
+/* CTA Button (Gold & Black) */
+.nav-item.cta .nav-link {
+    background-color: var(--gold);
+    color: var(--black);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-item.cta .nav-link:hover {
+    background-color: var(--dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--gold);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--gold);
+}
+
+/* ===== DESKTOP STYLES (768px+) ===== */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 1.5rem 3rem;
+    }
+    
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+        padding: 0;
+        border-top: none;
+    }
+    
+    .nav-item {
+        margin: 0 1rem;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+/* ===== LARGE DESKTOP (1200px+) ===== */
+@media (min-width: 1200px) {
+    .nav-item {
+        margin: 0 1.5rem;
+    }
+    
+    .nav-logo {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* ===== HERO SECTION STYLES ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    z-index: 1;
+  }
+  
+  .video-slide.active {
+    opacity: 1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.4);
+    z-index: 2;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 6rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s forwards 0.3s;
+  }
+  
+  .gold-text {
+    color: #d4af37;
+  }
+  
+  .hero-content p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s forwards 0.6s;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeUp 1s forwards 0.9s;
+  }
+  
+  .cta-btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .gold-btn {
+    background: #d4af37;
+    color: #0f0f0f;
+  }
+  
+  .gold-btn:hover {
+    background: #b38f2a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  }
+  
+  .outline-btn {
+    border: 2px solid #d4af37;
+    color: #fff;
+  }
+  
+  .outline-btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .video-nav {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 4;
+  }
+  
+  .nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-dot.active {
+    background: #d4af37;
+    transform: scale(1.2);
+  }
+  
+  @keyframes fadeUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

@@ -3,7 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>YMFC - Your Muscle Fitness Club</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="nav-logo">YM<span>FC</span></a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Training</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Coaches</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Membership</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item cta">
+            <a href="#" class="nav-link">Get Started</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Add this RIGHT AFTER your navbar (before any other sections) -->
+    <section class="hero">
+      <div class="video-container">
+        <!-- Video slides (hidden by default) -->
+        <video class="video-slide active" autoplay muted loop>
+          <source src="videos/gym1.mp4" type="video/mp4" />
+        </video>
+        <video class="video-slide" autoplay muted loop>
+          <source src="videos/gym2.mp4" type="video/mp4" />
+        </video>
+        <video class="video-slide" autoplay muted loop>
+          <source src="videos/gym3.mp4" type="video/mp4" />
+        </video>
+        <video class="video-slide" autoplay muted loop>
+          <source src="videos/gym4.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Overlay for better text visibility -->
+        <div class="overlay"></div>
+      </div>
+
+      <!-- Hero content -->
+      <div class="hero-content">
+        <h1 class="animate-text">PUSH <span class="gold-text">BEYOND</span></h1>
+        <p class="animate-text delay-1">
+          Elite training for extraordinary results
+        </p>
+        <div class="cta-buttons animate-text delay-2">
+          <a href="#" class="cta-btn gold-btn">Start Today</a>
+          <a href="#" class="cta-btn outline-btn">Explore</a>
+        </div>
+      </div>
+
+      <!-- Video navigation dots -->
+      <div class="video-nav">
+        <div class="nav-dot active" data-video="0"></div>
+        <div class="nav-dot" data-video="1"></div>
+        <div class="nav-dot" data-video="2"></div>
+        <div class="nav-dot" data-video="3"></div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
 </html>
