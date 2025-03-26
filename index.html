@@ -56,26 +56,43 @@
 
     <!-- Add this RIGHT AFTER your navbar (before any other sections) -->
     <section class="hero" id="home">
-      <div class="video-container">
-        <!-- Video slides (hidden by default) -->
-        <video class="video-slide active" autoplay muted loop>
-          <source src="videos/gym1.mp4" type="video/mp4" />
-        </video>
-        <video class="video-slide" autoplay muted loop>
-          <source src="videos/gym2.mp4" type="video/mp4" />
-        </video>
-        <video class="video-slide" autoplay muted loop>
-          <source src="videos/gym3.mp4" type="video/mp4" />
-        </video>
-        <video class="video-slide" autoplay muted loop>
-          <source src="videos/gym4.mp4" type="video/mp4" />
-        </video>
+      <!-- Image Slider Container -->
+      <div class="image-slider">
+        <!-- Image Slides -->
+        <div class="image-slide active">
+          <img
+            src="videos/gym1.jpg"
+            alt="YMFC Gym - Weight Training Area"
+            class="slide-img"
+          />
+        </div>
+        <div class="image-slide">
+          <img
+            src="videos/gym2.jpg"
+            alt="YMFC Gym - Cardio Zone"
+            class="slide-img"
+          />
+        </div>
+        <div class="image-slide">
+          <img
+            src="videos/gym3.jpg"
+            alt="YMFC Gym - Group Classes"
+            class="slide-img"
+          />
+        </div>
+        <div class="image-slide">
+          <img
+            src="videos/gym4.jpg"
+            alt="YMFC Gym - Personal Training"
+            class="slide-img"
+          />
+        </div>
 
-        <!-- Overlay for better text visibility -->
+        <!-- Overlay for text visibility -->
         <div class="overlay"></div>
       </div>
 
-      <!-- Hero content -->
+      <!-- Hero content (unchanged) -->
       <div class="hero-content">
         <h1 class="animate-text">PUSH <span class="gold-text">BEYOND</span></h1>
         <p class="animate-text delay-1">
@@ -88,15 +105,14 @@
         </div>
       </div>
 
-      <!-- Video navigation dots -->
-      <div class="video-nav">
-        <div class="nav-dot active" data-video="0"></div>
-        <div class="nav-dot" data-video="1"></div>
-        <div class="nav-dot" data-video="2"></div>
-        <div class="nav-dot" data-video="3"></div>
+      <!-- Navigation dots -->
+      <div class="slider-nav">
+        <div class="nav-dot active" data-slide="0"></div>
+        <div class="nav-dot" data-slide="1"></div>
+        <div class="nav-dot" data-slide="2"></div>
+        <div class="nav-dot" data-slide="3"></div>
       </div>
     </section>
-
     <!-- Training Section -->
     <section id="training" class="training-section">
       <div class="section-header">

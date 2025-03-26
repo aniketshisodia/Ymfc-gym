@@ -216,3 +216,49 @@ document.addEventListener('DOMContentLoaded', function () {
     showReview(0);
     startRotation();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.image-slide');
+    const dots = document.querySelectorAll('.nav-dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    // Auto-rotate every 5 seconds
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 2);
+    }
+
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', function () {
+            clearInterval(slideInterval);
+            showSlide(parseInt(this.getAttribute('data-slide')));
+            startSlider();
+        });
+    });
+
+    // Pause on hover
+    const heroSection = document.querySelector('.hero');
+    heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    heroSection.addEventListener('mouseleave', startSlider);
+
+    // Initialize
+    showSlide(0);
+    startSlider();
+});
