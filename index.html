@@ -23,14 +23,27 @@
     <header class="header">
       <nav class="navbar">
         <a href="#" class="nav-logo">YM<span>FC</span></a>
+        <!-- Update your nav-menu in the header -->
         <ul class="nav-menu">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Training</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Coaches</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Membership</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item">
+            <a href="#training" class="nav-link">Training</a>
+          </li>
+          <li class="nav-item">
+            <a href="#coaches" class="nav-link">Coaches</a>
+          </li>
+          <li class="nav-item">
+            <a href="#membership" class="nav-link">Membership</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#reviews" class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
           <li class="nav-item cta">
-            <a href="#" class="nav-link">Get Started</a>
+            <a href="#membership" class="nav-link">Get Started</a>
           </li>
         </ul>
         <div class="hamburger">
@@ -42,7 +55,7 @@
     </header>
 
     <!-- Add this RIGHT AFTER your navbar (before any other sections) -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="video-container">
         <!-- Video slides (hidden by default) -->
         <video class="video-slide active" autoplay muted loop>
@@ -69,8 +82,9 @@
           Elite training for extraordinary results
         </p>
         <div class="cta-buttons animate-text delay-2">
-          <a href="#" class="cta-btn gold-btn">Start Today</a>
-          <a href="#" class="cta-btn outline-btn">Explore</a>
+          <h1 class="animate-text">
+            Yes My! <span class="gold-text">Fitness Club</span>
+          </h1>
         </div>
       </div>
 
@@ -83,6 +97,342 @@
       </div>
     </section>
 
+    <!-- Training Section -->
+    <section id="training" class="training-section">
+      <div class="section-header">
+        <h2>OUR <span class="gold-text">TRAINING</span> PROGRAMS</h2>
+        <p>Transform your body with our expert-led sessions</p>
+      </div>
+
+      <div class="training-cards">
+        <!-- Card 1: Zumba -->
+        <div class="training-card">
+          <div class="card-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>ZUMBA</h3>
+          <p>High-energy dance workouts that burn calories while having fun.</p>
+          <a href="#contact" class="btn-outline">Join Class</a>
+        </div>
+
+        <!-- Card 2: Strength Training -->
+        <div class="training-card">
+          <div class="card-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <h3>STRENGTH TRAINING</h3>
+          <p>
+            Build muscle and increase power with structured weight programs.
+          </p>
+          <a href="#contact" class="btn-outline">Get Started</a>
+        </div>
+
+        <!-- Card 3: Personal Training -->
+        <div class="training-card">
+          <div class="card-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>PERSONAL TRAINING</h3>
+          <p>1-on-1 customized workouts for maximum results.</p>
+          <a href="#contact" class="btn-primary">Book Session</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="coaches" class="coaches-section">
+      <div class="section-header">
+        <h2>MEET OUR <span class="gold-text">EXPERT COACHES</span></h2>
+        <p>Professional trainers dedicated to your fitness journey</p>
+      </div>
+
+      <div class="coach-cards">
+        <!-- Zumba Trainer -->
+        <div class="coach-card">
+          <div class="coach-img">
+            <img src="images/img1.png" alt="Preeti Suman - Zumba Expert" />
+          </div>
+          <div class="coach-info">
+            <h3>Preeti Suman</h3>
+            <p class="specialization">Certified Zumba Expert</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#contact" class="btn-outline">Book Session</a>
+          </div>
+        </div>
+
+        <!-- Strength Trainer 1 -->
+        <div class="coach-card">
+          <div class="coach-img">
+            <img src="images/img2.png" alt="Chandan - Certified Trainer" />
+          </div>
+          <div class="coach-info">
+            <h3>Chandan</h3>
+            <p class="specialization">Certified Strength Trainer</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#contact" class="btn-outline">Book Session</a>
+          </div>
+        </div>
+
+        <!-- Strength Trainer 2 -->
+        <div class="coach-card">
+          <div class="coach-img">
+            <img src="images/img3.png" alt="Sooraj - Certified Trainer" />
+          </div>
+          <div class="coach-info">
+            <h3>Sooraj</h3>
+            <p class="specialization">Certified Personal Trainer</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="#contact" class="btn-outline">Book Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="membership" class="membership-section">
+      <div class="section-header">
+        <h2>MEMBERSHIP <span class="gold-text">PLANS</span></h2>
+        <p>
+          All plans include 24/7 gym access, personal trainer guidance, and
+          customized diet plans
+        </p>
+      </div>
+
+      <div class="pricing-cards">
+        <!-- 1 Month -->
+        <!-- <div class="pricing-card">
+          <h3>1 MONTH</h3>
+          <div class="price">₹2,500</div>
+          <ul class="features">
+            <li>All equipment access</li>
+            <li>Weekly progress checks</li>
+            <li>Basic diet plan</li>
+          </ul>
+          <a href="#contact" class="cta-btn">Join Now</a>
+        </div> -->
+
+        <!-- 3 Months -->
+        <div class="pricing-card">
+          <h3>3 MONTHS</h3>
+          <div class="price">₹5,000</div>
+          <div class="savings">Save ₹2,500</div>
+          <ul class="features">
+            <li>All 1-month benefits</li>
+            <li>Bi-weekly trainer sessions</li>
+            <li>Enhanced diet plan</li>
+          </ul>
+          <a href="#contact" class="cta-btn">Join Now</a>
+        </div>
+
+        <!-- 6 Months -->
+        <div class="pricing-card">
+          <h3>6 MONTHS</h3>
+          <div class="price">₹8,000</div>
+          <div class="savings">Save ₹7,000</div>
+          <ul class="features">
+            <li>All 3-month benefits</li>
+            <li>Weekly trainer sessions</li>
+            <li>Premium diet plan</li>
+          </ul>
+          <a href="#contact" class="cta-btn">Join Now</a>
+        </div>
+
+        <!-- 12 Months (Best Value) -->
+        <div class="pricing-card popular">
+          <div class="popular-tag">BEST VALUE</div>
+          <h3>12 MONTHS</h3>
+          <div class="price">₹12,000</div>
+          <div class="savings">Save ₹18,000</div>
+          <ul class="features">
+            <li>All 6-month benefits</li>
+            <li>Unlimited trainer access</li>
+            <li>VIP diet customization</li>
+            <li>Free locker</li>
+          </ul>
+          <a href="#contact" class="cta-btn">Join Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews-section">
+      <div class="section-header">
+        <h2>MEMBERS <span class="gold-text">REVIEWS</span></h2>
+        <p>Hear what our community says about their experience</p>
+      </div>
+
+      <div class="reviews-container">
+        <div class="reviews-slider">
+          <!-- Review 1 -->
+          <div class="review-card active">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "I recently attended the Dandiya Event organized by Yes My Fitness
+              Gym, and I had an absolutely fantastic time. The event was
+              incredibly well-organized. The atmosphere was filled with joy."
+            </p>
+            <div class="reviewer">- Riya Sharma</div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "One of the best gyms with a vast variety of equipment and best
+              instructors. Wonderful Zumba sessions and they've the best
+              facilities across Ghaziabad."
+            </p>
+            <div class="reviewer">- Vikram Patel</div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "Great gym with top-quality equipment. The trainers are friendly
+              and knowledgeable, always ready to help. The facility is clean and
+              well-maintained."
+            </p>
+            <div class="reviewer">- Ananya Gupta</div>
+          </div>
+        </div>
+
+        <div class="review-nav">
+          <span class="nav-dot active" data-index="0"></span>
+          <span class="nav-dot" data-index="1"></span>
+          <span class="nav-dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+    <footer id="contact" class="footer-section">
+      <div class="footer-wave"></div>
+
+      <div class="footer-container">
+        <!-- Contact Column -->
+        <div class="footer-column contact-column">
+          <div class="footer-logo">YM<span>FC</span></div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>ADDRESS</h4>
+                <p>
+                  Onyx Plaza, Near Vanasthali Public School<br />
+                  Rajendra Nagar, Sector 3, Vasundhara<br />
+                  Ghaziabad, Uttar Pradesh 201012
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>CALL US</h4>
+                <p>+91 98765 43210<br />+91 98765 43211</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>EMAIL</h4>
+                <p>contact@yesmyfitness.com<br />support@yesmyfitness.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hours Column -->
+        <div class="footer-column hours-column">
+          <h3 class="section-title">OPERATING HOURS</h3>
+          <div class="hours-card">
+            <div class="day-group">
+              <div class="day">Monday - Saturday</div>
+              <div class="time-slots">
+                <div class="time-slot">
+                  <span class="period">Morning</span>
+                  <span class="time">6:00 AM - 12:00 PM</span>
+                </div>
+                <div class="time-slot">
+                  <span class="period">Evening</span>
+                  <span class="time">5:00 PM - 10:00 PM</span>
+                </div>
+              </div>
+            </div>
+            <div class="day-group sunday">
+              <div class="day">Sunday</div>
+              <div class="closed-badge">Closed</div>
+            </div>
+          </div>
+
+          <div class="emergency-note">
+            <i class="fas fa-exclamation-circle"></i>
+            <p>
+              For personal training appointments outside hours, please call in
+              advance
+            </p>
+          </div>
+        </div>
+
+        <!-- Map Column -->
+        <div class="footer-column map-column">
+          <h3 class="section-title">FIND US</h3>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.304845557591!2d77.386093!3d28.6642706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1a8dbaa7a25%3A0xa29b6efad90389da!2sOnyx%20plaza%2C%20near%20VANASTHALI%20PUBLIC%20SCHOOL%2C%20Rajendra%20Nagar%2C%20Sector%203%2C%20Vasundhara%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201012!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+            <div class="map-overlay"></div>
+            <a
+              href="https://maps.google.com?q=Onyx+plaza,+near+VANASTHALI+PUBLIC+SCHOOL,+Rajendra+Nagar,+Sector+3,+Vasundhara,+Ghaziabad,+Uttar+Pradesh+201012"
+              target="_blank"
+              class="map-cta"
+            >
+              <i class="fas fa-directions"></i> GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+        </div>
+
+        <div class="footer-legal">
+          <p>&copy; 2024 Yes My Fitness Club. All Rights Reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
